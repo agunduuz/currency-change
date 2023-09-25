@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --main-color: ;
+  --alternate-color: ;
+  --text-color: ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to left,
+    #191c1f,
+    #161b20,
+    #141a21,
+    #111822,
+    #0f1723
+  );
+  font-family: 'Montserrat', sans-serif;
+}
+main {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+main section#moneys {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+}
+main section#moneys button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 7px;
+}
+main section#moneys button:nth-child(n) {
+  background-color: #d67d2d;
+}
+main section#moneys button:nth-child(2n) {
+  background-color: #b7f39b;
+}
+main section#moneys button:nth-child(3n) {
+  background-color: #00c6b3;
+}
+main section#moneys button:nth-child(n),
+main section#moneys button:nth-child(2n),
+main section#moneys button:nth-child(3n) {
+  transition: all ease 0.4s;
+}
+main section#moneys button:nth-child(n):hover,
+main section#moneys button:nth-child(2n):hover,
+main section#moneys button:nth-child(3n):hover {
+  transform: scale(1.1);
+}
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+main section article {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 1 calc(33.3333% - 20px);
+  background-color: #00c6b3;
+  padding: 10px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 10px 10px 9px -7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 10px 10px 9px -7px rgba(0, 0, 0, 1);
+  box-shadow: inset 10px 10px 9px -7px rgba(0, 0, 0, 1);
+  z-index: 3;
+  margin: 10px;
+}
+main section article::after {
+  z-index: -1;
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  left: 0;
+  border-radius: 10px;
+  -webkit-box-shadow: inset -10px -10px 9px -7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset -10px -10px 9px -7px rgba(0, 0, 0, 1);
+  box-shadow: inset -10px -10px 9px -7px rgba(0, 0, 0, 1);
+}
+main section article h4 {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #0f1723;
+  text-align: center;
+}
+main section article h6 {
+  font-size: 0.7rem;
+  color: #008073b7;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+main section article div.description {
+  display: flex;
+}
+
+main section article div.description p,
+main section article div.buy-part div p.price {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding: 10px;
+  font-weight: 700;
+  flex: 1;
+  color: #0f1723;
+}
+main section article div.buy-part div p.price {
+  flex: 0;
+  display: none;
+}
+
+main section article div.description p span {
+  font-weight: 500;
+}
+main section article div.buy-part {
+  display: flex;
+  align-items: center;
+}
+main section article div.buy-part div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+main section article div.buy-part div p.price {
+  font-size: 1.2rem;
+}
+main section article div.buy-part i.loading-icon {
+  animation: spin 1s linear infinite;
+  /* display: block !important; */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+main section article div.buy-part div.buy {
+  padding: 10px;
+}
+
+main section article div.buy-part div.buy button {
+  padding: 7px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  background-color: #0f1723;
+  color: #b7f39b;
+  border: 2px solid #0f1723;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+main section article div.buy-part div.buy button:hover {
+  transform: scale(1.1);
+}
